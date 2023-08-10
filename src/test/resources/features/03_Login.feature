@@ -1,6 +1,4 @@
-#@ignore
 Feature: Login
-
 
   Scenario Outline: Login with different credentials
 

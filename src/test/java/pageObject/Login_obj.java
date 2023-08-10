@@ -25,11 +25,12 @@ public class Login_obj {
         }
 
         public void InputSigninData(String username, String password)
-        {
-            UsernameTxt.sendKeys(username);
-            PasswrodTxt.sendKeys(password);
-            SubmitBtn.click();
-        }
+    {
+        UsernameTxt.sendKeys(username);
+        PasswrodTxt.sendKeys(password);
+
+        SubmitBtn.click();
+    }
 
         public void CheckSignin()
         {

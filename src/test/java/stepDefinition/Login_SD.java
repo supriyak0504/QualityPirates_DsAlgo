@@ -17,12 +17,13 @@ public class Login_SD {
 
         }
 
-        @When("The user enters the {string} and {string}")
-        public void the_user_enters_the_username_and_password(String username, String password) throws InterruptedException {
-            Thread.sleep(2000);
-            lp.InputSigninData(username, password);
+    @When("The user enters the {string} and {string}")
+    public void the_user_enters_the_username_and_password(String username, String password) throws InterruptedException {
+        Thread.sleep(2000);
+        lp.InputSigninData(username, password);
 
         }
+
 
         @Then("The signed in homepage appears")
         public void the_signed_in_homepage_appears() {
