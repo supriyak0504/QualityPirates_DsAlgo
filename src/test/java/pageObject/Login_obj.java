@@ -24,10 +24,10 @@ public class Login_obj {
 
         }
 
-        public void InputSigninData()
+        public void InputSigninData(String username, String password)
         {
-            UsernameTxt.sendKeys("point1");
-            PasswrodTxt.sendKeys("Point0987");
+            UsernameTxt.sendKeys(username);
+            PasswrodTxt.sendKeys(password);
             SubmitBtn.click();
         }
 

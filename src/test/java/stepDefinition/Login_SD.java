@@ -17,10 +17,10 @@ public class Login_SD {
 
         }
 
-        @When("The user enters the username and password")
-        public void the_user_enters_the_username_and_password() throws InterruptedException {
+        @When("The user enters the {string} and {string}")
+        public void the_user_enters_the_username_and_password(String username, String password) throws InterruptedException {
             Thread.sleep(2000);
-            lp.InputSigninData();
+            lp.InputSigninData(username, password);
 
         }
 
