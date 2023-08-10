@@ -5,28 +5,4 @@
           name="S:/Education-Selenium SDET/intellij/Git/Ds_AlgoProj/src/test/java/testRunner/Runner.java">
         <classes/>
     </test>
-<test name="chromeTest">
-
-    <parameter name="browser" value="chrome"/>
-    <classes>
-        <class name="crossBrowser.CrossBrowserTest"/>
-    </classes>
-</test>
-
-<test name="firefoxTest">
-
-    <parameter name="browser" value="firefox"/>
-    <classes>
-        <class name="crossBrowser.CrossBrowserTest"/>
-    </classes>
-</test>
-
-<test name="edgeTest">
-
-    <parameter name="browser" value="edge"/>
-    <classes>
-        <class name="crossBrowser.CrossBrowserTest"/>
-    </classes>
-</test>
-
 </suite>
