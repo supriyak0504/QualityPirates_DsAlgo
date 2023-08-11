@@ -14,6 +14,8 @@ public class HomePage_obj {
         @FindBy(xpath = "//div/h5[text()='Array']") WebElement DisplayCheck;
 
         WebDriver driver = BaseClass.getDriver();
+
+
         public void InitHomePage(String string)
         {
             driver.get(string);
