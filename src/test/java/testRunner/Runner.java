@@ -4,7 +4,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-        features = {"src/test/resources/features"},
+        features = {"C:\\numpy project\\QualityPirates_DsAlgo\\src\\test\\resources\\features"},
         glue = {"stepDefinition"},
       //  monochrome = true,
         plugin = {

@@ -50,6 +50,62 @@ Feature: Array
      When User clicks Practice Questions link
      Then User should be redirected to Practice page
 
+  Scenario: Practice Question_Search the array with Run Button
+    Given The user is on Practice Question page
+    When User clicks Search the array link
+    Then User should be redirected to Question page
+    And User clear the TryEditor Box
+    And User write the python code after clear the Editor Box
+    And User click the run button
+    Then User able to see python program result at editor output window
+
+  Scenario: Practice Question_Search the array with Submit Button
+    Given User is on the TryEditor afther valid python code
+    When User click the SubmitButton
+    Then User get the Error message
+
+  Scenario: Max Consecutive Once with Run Button
+    Given  The user is on Practice Question page
+    When User clicks Max Consecutive Once link
+    Then User should be redirected to Max Consecutive Once page
+    And User clear the TryEditor Box
+    And User write the python code after clear the Editor Box
+    And User click the run button
+    Then User able to see python program result at editor output window
+
+  Scenario: Practice Max Consecutive Once with Submit Button
+    Given User is on the TryEditor afther valid python code
+    When User click the SubmitButton
+    Then User get the Error message
+
+  Scenario: FindNumber with Run Button
+    Given The user is on Practice Question page
+    When User Find Number link
+    Then User should be redirected to Find Number page
+    And User clear the TryEditor Box
+    And User write the python code after clear the Editor Box
+    And User click the run button
+    Then User able to see python program result at editor output window
+
+  Scenario: FindNumber with Submit Button
+    Given User is on the TryEditor afther valid python code
+    When User click the SubmitButton
+    Then User get the Error message
+
+  Scenario: SquaresOfSortedArray with Run Button
+    Given The user is on Practice Question page
+    When User clicks SquaresOfSortedArray link
+    Then User should be redirected to SquaresOfSortedArray page
+    And User clear the TryEditor Box
+    And User write the python code after clear the Editor Box
+    And User click the run button
+    Then User able to see python program result at editor output window
+
+  Scenario: SquaresOfSortedArray with Submit Button
+    Given User is on the TryEditor_Box with valid python code
+    When User click the SubmitButton
+    Then User get the "No tests were collected" Error message
+
   Scenario: Back to HomePage
     Given The user is on "Applications on Array" page
     When User click Numphy Ninja link
@@ -57,18 +113,3 @@ Feature: Array
     Then User should be redirected to Home Page page
 
 
- # Scenario: Practice Question_Search the array with Run Button
-  #  Given The user is on Practice page
-   # When User clicks Search the array link
-   # Then User should be redirected to Question page
-   # And User write the python code after clear the Editor Box
-   # And User click the run button
-   # Then User able to see python program result at editor output window
-
-  #Scenario: Practice Question_Search the array with Submit Button
-  #  Given The user is on Practice page
-   # When User clicks Search the array link
-   # Then User should be redirected to Question page
-   # And User write the python code after clear the Editor Box
-   # And User click the Submit button
-   # Then User able to see Error massage "error occurred during submission"

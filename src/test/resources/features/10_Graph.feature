@@ -36,5 +36,10 @@ Feature: Graph
       Then User is redirected on Try Editor
       And User goes back on Graph Page
 
+  Scenario: Back to HomePage
+    Given The user is on "Graph" page
+    When User click Numphy Ninja link
+    When User click GetStarted link
+    Then User should be redirected to Home Page page
 
 

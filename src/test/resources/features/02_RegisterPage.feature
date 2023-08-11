@@ -1,4 +1,4 @@
-@ignore
+
 Feature: Registration Page
 
   Scenario Outline: User Registration

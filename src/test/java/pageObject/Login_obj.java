@@ -29,6 +29,10 @@ public class Login_obj {
         UsernameTxt.sendKeys(username);
         PasswrodTxt.sendKeys(password);
 
+        //SubmitBtn.click();
+    }
+    public void LogIn()
+    {
         SubmitBtn.click();
     }
 

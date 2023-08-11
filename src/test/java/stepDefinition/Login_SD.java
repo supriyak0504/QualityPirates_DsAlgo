@@ -1,9 +1,13 @@
 package stepDefinition;
 
+import utilities.ReaderXL;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObject.Login_obj;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 
 public class Login_SD {
@@ -17,20 +21,24 @@ public class Login_SD {
 
         }
 
-    @When("The user enters the {string} and {string}")
-    public void the_user_enters_the_username_and_password(String username, String password) throws InterruptedException {
-        Thread.sleep(2000);
-        lp.InputSigninData(username, password);
+    @When("The user enters the sheetName {string} and rowNumber {int}")
+    public void the_user_enters_the_sheet_name_and_row_number(String sheetName, Integer rowNumber) throws InterruptedException, IOException {
+        ReaderXL reader = new ReaderXL();
+        List<Map<String,String>> testData=
+                reader.getData("C:\\Users\\sosud\\Documents\\Deepti doc\\DataDrivensheet.xlsx",sheetName );
+        String Uname = testData.get(rowNumber).get("username");
+        String PW = testData.get(rowNumber).get("password");
+        lp.InputSigninData(Uname,PW);
+    }
+    @When("User click LogIn Button")
+    public void userClickLogInButton() {
+        lp.LogIn();
+    }
 
-        }
-
-
-        @Then("The signed in homepage appears")
-        public void the_signed_in_homepage_appears() {
+    @Then("The signed in homepage appears")
+    public void the_signed_in_homepage_appears() {
             lp.CheckSignin();
 
         }
-
-
 
 }
