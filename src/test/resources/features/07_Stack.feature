@@ -1,4 +1,4 @@
-@ignore
+
 Feature: Stack
 
   Scenario: User is on Ds portal main page

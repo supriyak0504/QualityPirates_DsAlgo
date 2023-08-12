@@ -13,10 +13,6 @@ public class TryEditorDatadriven_SD {
 
     }
 
-   //@When("User enter valid {string} in try editor box")
-   // public void user_enter_valid_in_try_editor_box(String pythoncode) throws InterruptedException {
-    //   te.Pythoncode1(pythoncode);
-   // }
    @When("User enter valid {string}in try editor box")
    public void userEnterValidInTryEditorBox(String pythoncode) throws InterruptedException {
        te.Pythoncode(pythoncode);
@@ -25,11 +21,17 @@ public class TryEditorDatadriven_SD {
     public void user_click_on_run_button() throws InterruptedException {
         te.PythonRun();
     }
-
     @Then("User should able to see the output")
     public void user_should_able_to_see_the_output() throws InterruptedException {
-        te.Pythonclear();
+        te. ClearTextEditor();
+    }
+    @Given("The user is on Try Editor Page")
+    public void the_user_is_on_try_editor_page() {
 
+    }
+    @When("User Click to go back")
+    public void user_click_to_go_back() {
+        te.BacktoPage();
     }
 
 }

@@ -2,8 +2,10 @@ package pageObject;
 
 import baseDriverProperty.BaseClass;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -56,16 +58,33 @@ public class Array_obj {
     @FindBy(xpath = "//button[@type=\"button\"]")
     WebElement RunButton_WE;
 
-    @FindBy(xpath = "\"//div//form[@id='answer_form']/div/div/div/textarea\"")
+    @FindBy(xpath = "//form[@id='answer_form']/div/div/div/textarea")
     WebElement TryEditorBox_WE;
 
-    @FindBy(xpath = "//a[@href=\"/\"]")
-    WebElement numpyninja_WE;
+    @FindBy(xpath = "//span[@role='presentation']")
+    WebElement ClearDef;
 
-    @FindBy(xpath = "//button[@class=\"btn\"]")
-    WebElement numpyninja1_WE;
+    @FindBy(xpath = "//input[@type=\"submit\"]")WebElement SubmitButton_WE;
+
+    @FindBy(xpath = "//pre[text()=\"Error occurred during submission\"]")WebElement ErrorMsgDisplay_WE;
+
+    @FindBy(xpath = "//a[@href=\"/question/2\"]")WebElement MaxConsecutiveOnce_WE;
+
+    @FindBy(xpath = "//a[@href=\"/question/3\"]")WebElement FindNumber_WE;
+
+    @FindBy(xpath = "//a[@href=\"/question/4\"]")WebElement SquaresOfSortedArray_WE;
+
+    @FindBy(xpath = "//pre[@id=\"output\"]")WebElement SquaresOfSortedArrarSubmitError_WE;
+
+
+    @FindBy(xpath = "//a[@href=\"/\"]") WebElement numpyninja_WE;
+
+    @FindBy(xpath = "//button[@class=\"btn\"]") WebElement numpyninja1_WE;
 
     WebDriver driver = BaseClass.setDriver();
+
+    Boolean status;
+    Actions act = new Actions(driver);
 
     public void InitArrayPage(String string) {
 
@@ -78,17 +97,19 @@ public class Array_obj {
         GetStarted.click();
     }
 
-    public void ArrayPageDisplay() {
+    public void ArrayPageDisplay() throws InterruptedException {
+        Thread.sleep(1000);
         boolean status = DisplayCheck.isDisplayed();
         assertTrue(status);
     }
 
     public void ArrayInPythonPage() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         ArrayInPython.click();
     }
 
-    public void ArrayInPythonPageDisplay() {
+    public void ArrayInPythonPageDisplay() throws InterruptedException {
+        Thread.sleep(1000);
         boolean status = DisplayCheckArrayInPython.isDisplayed();
         assertTrue(status);
     }
@@ -108,53 +129,57 @@ public class Array_obj {
     }
 
     public void ArraysUsingList() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         PageFactory.initElements(driver, this);
         ArraysUsingListLink.click();
     }
 
-    public void ArrayUsingDisplay() {
+    public void ArrayUsingDisplay() throws InterruptedException {
+        Thread.sleep(1000);
         boolean status = ArraysUsingListDisplay.isDisplayed();
         assertTrue(status);
     }
 
     public void ArrayUsingListTryhereButton() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         PageFactory.initElements(driver, this);
         TryHereButton.click();
     }
 
-    public void ArrayUsingListTryhereCodeBoxDisplay() {
+    public void ArrayUsingListTryhereCodeBoxDisplay() throws InterruptedException {
+        Thread.sleep(1000);
         boolean status = TryEditorDisplay.isDisplayed();
         assertTrue(status);
         driver.navigate().back();
     }
 
     public void BasicOperationInLists() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         PageFactory.initElements(driver, this);
         BasicOperationInLists_WE.click();
     }
 
-    public void BasicOperationDisplay() {
+    public void BasicOperationDisplay() throws InterruptedException {
+        Thread.sleep(1000);
         boolean status = BasicOperationDisplay_WE.isDisplayed();
         assertTrue(status);
     }
 
     public void BasicOperationTryhereButton() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         PageFactory.initElements(driver, this);
         TryHereButton.click();
     }
 
-    public void BasicOperationTryhereDisplay() {
+    public void BasicOperationTryhereDisplay() throws InterruptedException {
+        Thread.sleep(1000);
         boolean status = TryEditorDisplay.isDisplayed();
         assertTrue(status);
         driver.navigate().back();
     }
 
     public void ApplicationsOfArray() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         PageFactory.initElements(driver, this);
         ApplicationsOfArray_WE.click();
     }
@@ -165,7 +190,7 @@ public class Array_obj {
     }
 
     public void ApplicationsOfArrayTryhereButton() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         PageFactory.initElements(driver, this);
         TryHereButton.click();
     }
@@ -179,7 +204,7 @@ public class Array_obj {
     }
 
     public void PracticeQuestions() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         PageFactory.initElements(driver, this);
         PracticeQuestions_WE.click();
     }
@@ -187,12 +212,11 @@ public class Array_obj {
     public void PracticeQuestionsDisplay() {
         boolean status = PracticeQuestionsDisplay_WE.isDisplayed();
         assertTrue(status);
-        driver.navigate().back();
     }
 
     public void SearchTheArrayLink() throws InterruptedException {
         PageFactory.initElements(driver, this);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         SearchTheArray_WE.click();
     }
 
@@ -201,25 +225,82 @@ public class Array_obj {
         assertTrue(status);
     }
 
-    public void TryEditorBox() {
+    public void ClearTxtEditor() throws InterruptedException {
+
         PageFactory.initElements(driver, this);
-        TryEditorBox_WE.sendKeys("hello");
+
+        ClearDef.click();
+
+        act.keyDown(Keys.CONTROL).sendKeys("a").sendKeys(Keys.DELETE).keyUp(Keys.CONTROL).perform();
     }
 
-    public void RunButton() {
+
+    public void TryEditorBox () throws InterruptedException {
+        Thread.sleep(2000);
+        PageFactory.initElements(driver, this);
+        TryEditorBox_WE.sendKeys("print \"Hello\"");
+    }
+
+    public void RunButton () {
         RunButton_WE.click();
     }
+    public void SubmitButton() throws InterruptedException {
+        Thread.sleep(1000);
+        PageFactory.initElements(driver, this);
+        SubmitButton_WE.click();
+    }
+    public void ErrorMsgDisplay() throws InterruptedException {
+        Thread.sleep(1000);
+        boolean status = ErrorMsgDisplay_WE.isDisplayed();
+        assertTrue(status);
+        driver.navigate().back();
+    }
+
+    public void MaxConsecutiveOnce() throws InterruptedException {
+        Thread.sleep(1000);
+        PageFactory.initElements(driver, this);
+        MaxConsecutiveOnce_WE.click();
+    }
+
+    public void  FindNumber() throws InterruptedException {
+        Thread.sleep(1000);
+        PageFactory.initElements(driver, this);
+        FindNumber_WE.click();
+    }
+
+    public void SquaresOfSortedArray() throws InterruptedException {
+        Thread.sleep(1000);
+        PageFactory.initElements(driver, this);
+        SquaresOfSortedArray_WE.click();
+    }
+
+    public void SquaresOfSortedArrarSubmitError() throws InterruptedException {
+        Thread.sleep(1000);
+        boolean status = SquaresOfSortedArrarSubmitError_WE.isDisplayed();
+        assertTrue(status);
+        driver.navigate().back();
+    }
+
 
     public void BackHomePage() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         PageFactory.initElements(driver, this);
         numpyninja_WE.click();
     }
 
     public void BackHomePage1() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         PageFactory.initElements(driver, this);
         numpyninja1_WE.click();
 
     }
 }
+
+
+
+
+
+
+
+
+
