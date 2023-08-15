@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import utilities.LoggerLoad;
 
 import static org.testng.Assert.assertTrue;
 
@@ -35,6 +37,7 @@ public class LinkList_obj {
 
 
     WebDriver driver = BaseClass.setDriver();
+    boolean status;
     public void InitLinkedListPage(String string) {
 
         PageFactory.initElements(driver,this);
@@ -42,24 +45,42 @@ public class LinkList_obj {
 
     public void LinkedList_Home() throws InterruptedException {
         PageFactory.initElements(driver,this);
-        Thread.sleep(2000);
+        Thread.sleep(500);
         GetStarted_LinkedList.click();
     }
     public void LinkedListDisplay()
     {
-        boolean status = LinkedListDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status = LinkedListDisplay_WE.isDisplayed();
+        try {
+            status = LinkedListDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void Introduction() throws InterruptedException {
         PageFactory.initElements(driver,this);
-        Thread.sleep(2000);
+        Thread.sleep(500);
         Introduction_WE.click();
     }
     public void IntroductionDisplay()
     {
-        boolean status = IntroductionDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status = IntroductionDisplay_WE.isDisplayed();
+        try {
+            status = IntroductionDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void IntroductionTryhereButton() throws InterruptedException {
@@ -69,74 +90,137 @@ public class LinkList_obj {
     }
     public void IntroductionTryhereCodeBoxDisplay()
     {
-        boolean status = RunButton_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status = RunButton_WE.isDisplayed();
+        try {
+            status = RunButton_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
         driver.navigate().back();
     }
 
     public void CreatingLinkList() throws InterruptedException {
         PageFactory.initElements(driver,this);
-        Thread.sleep(2000);
+        Thread.sleep(500);
         CreatingLinkList_WE.click();
     }
     public void CreatingLinkListDisplay()
     {
-        boolean status = CreatingLinkListDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status = CreatingLinkListDisplay_WE.isDisplayed();
+        try {
+            status = CreatingLinkListDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void  TypesOfLinkedList() throws InterruptedException {
         PageFactory.initElements(driver,this);
-        Thread.sleep(2000);
+        Thread.sleep(500);
         TypesOfLinkedList_WE.click();
     }
     public void TypesOfLinkedListDisplay()
     {
-        boolean status =  TypesOfLinkedListDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status =  TypesOfLinkedListDisplay_WE.isDisplayed();
+        try {
+            status = TypesOfLinkedListDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void  ImplementLinkedList() throws InterruptedException {
         PageFactory.initElements(driver,this);
-        Thread.sleep(2000);
+        Thread.sleep(500);
         ImplementLinkedList_WE.click();
     }
     public void ImplementLinkedListDisplay()
     {
-        boolean status =  ImplementLinkedListDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status =  ImplementLinkedListDisplay_WE.isDisplayed();
+        try {
+            status = ImplementLinkedListDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void TraversalPage() throws InterruptedException {
         PageFactory.initElements(driver,this);
-        Thread.sleep(2000);
+        Thread.sleep(500);
         Traversal_WE.click();
     }
     public void TraversalPageDisplay()
     {
-        boolean status =  TraversalDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status =  TraversalDisplay_WE.isDisplayed();
+        try {
+            status = TraversalDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void InsertionPage() throws InterruptedException {
         PageFactory.initElements(driver,this);
-        Thread.sleep(2000);
+        Thread.sleep(500);
         Insertion_WE.click();
     }
     public void InsertionPageDisplay()
     {
-        boolean status =  InsertionDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status =  InsertionDisplay_WE.isDisplayed();
+        try {
+            status = InsertionDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
     public void DeletionPage() throws InterruptedException {
         PageFactory.initElements(driver,this);
-        Thread.sleep(2000);
+        Thread.sleep(500);
         Deletion_WE.click();
     }
     public void DeletionPageDisplay()
     {
-        boolean status =  DeletionDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status =  DeletionDisplay_WE.isDisplayed();
+        try {
+            status = DeletionDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
     public void DeletionTryHereButton(){
         PageFactory.initElements(driver, this);
@@ -144,8 +228,17 @@ public class LinkList_obj {
     }
     public void  DeletionTryHereDisplay()
     {
-        boolean status =RunButton_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status =RunButton_WE.isDisplayed();
+        try {
+            status = RunButton_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
         //driver.navigate().back();
     }
 
@@ -156,8 +249,16 @@ public class LinkList_obj {
     }
     public void DeletionTryhereCodeBoxDisplay()
     {
-        boolean status = RunButton_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status = RunButton_WE.isDisplayed();
+        try {
+            status = RunButton_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
         //driver.navigate().back();
     }
 

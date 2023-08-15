@@ -11,8 +11,11 @@ Feature: Data Structure Introduction
        When User scrolls down the page
        And User clicks on Time Complexity link
        Then User is on "Time Complexity" page and scrolls down page
-       And User clicks on "Try here" box button
-       Then User goes back on Time Complexity page
+       And User clicks on Try here button
+       Then the text editor opens and user gives python code
+       And User clicks on Run Button
+       Then The output is displayed
+
 
        Scenario: Practice Questions
          Given User is on "Data Structures-Introduction" page

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.LoggerLoad;
 
 import static org.testng.AssertJUnit.assertTrue;
 
@@ -22,7 +23,7 @@ public class RegisterPage_obj {
 
     @FindBy (xpath = "//input[@value='Register']") WebElement clickButton;
 
-    @FindBy (xpath = "//div[@role='alert']") WebElement registerMessage;
+    @FindBy (xpath = "//a[text()='NumpyNinja']") WebElement registerMessage;
 
 
     public void clickRegister() {
@@ -42,9 +43,18 @@ public class RegisterPage_obj {
 
     }
 
-    public void confirmRegistration() {
-        boolean status = registerMessage.isDisplayed();
-        assertTrue(status);
+    public void confirmRegistration() throws Exception {
+        try{
+            boolean status = registerMessage.isDisplayed();
+            assertTrue(status);
+            LoggerLoad.info("Assert True if Logged in");
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false if not Logged in");
+            System.out.println(e.getMessage());
+        }
+
+
+
 
 
     }

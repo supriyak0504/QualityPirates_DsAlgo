@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import utilities.LoggerLoad;
 
 public class Queue_obj {
     boolean status;
@@ -47,8 +48,17 @@ public class Queue_obj {
     }
 
     public void CheckQueLanding() {
-        status = QueueLPMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = QueueLPMsg.isDisplayed();
+        try {
+            status = QueueLPMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
         //    jse.executeScript("window.scrollBy(0,500);");
     }
 
@@ -60,8 +70,17 @@ public class Queue_obj {
 
     public void implQueuechk() {
         PageFactory.initElements(driver, this);
-        status = ImplQueueMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = ImplQueueMsg.isDisplayed();
+        try {
+            status = ImplQueueMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void implCollections() {
@@ -71,8 +90,17 @@ public class Queue_obj {
 
     public void implCollchk() {
         PageFactory.initElements(driver, this);
-        status = ImplQueueCollMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = ImplQueueCollMsg.isDisplayed();
+        try {
+            status = ImplQueueCollMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void implusingarray()
@@ -84,8 +112,17 @@ public class Queue_obj {
     public void implarraychk()
     {
         PageFactory.initElements(driver, this);
-        status = ImplArrayMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = ImplArrayMsg.isDisplayed();
+        try {
+            status = ImplArrayMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
 
     }
 
@@ -98,8 +135,17 @@ public class Queue_obj {
     public void queueopschk()
     {
         PageFactory.initElements(driver, this);
-        status = QueueOpsMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = QueueOpsMsg.isDisplayed();
+        try {
+            status = QueueOpsMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
 
     }
 

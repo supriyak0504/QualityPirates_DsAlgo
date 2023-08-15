@@ -59,14 +59,14 @@ TryHereEditor_obj tr = new TryHereEditor_obj();
 
     @When("User clicks on implementation using collections.deque")
     public void userClicksOnImplementationUsingCollectionsDeque()throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
         qp.implCollections();
 
     }
 
     @Then("The implementation using collections.deque page opens")
     public void theImplementationUsingCollectionsDequePageOpens()throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
         qp.implCollchk();
     }
 
@@ -79,31 +79,31 @@ TryHereEditor_obj tr = new TryHereEditor_obj();
 
     @When("User clicks on implementation using array")
     public void userClicksOnImplementationUsingArray()throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
     qp.implusingarray();
     }
 
     @Then("The implementation using array page opens")
     public void theImplementationUsingArrayPageOpens()throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
     qp.implarraychk();
     }
 
  //   @Given("User is on implementation using array landing page")
   //  public void userIsOnImplementationUsingArrayLandingPage()throws InterruptedException {
-  //      Thread.sleep(2000);
+  //      Thread.sleep(500);
   //  qp.implarraychk();
   //  }
 
     @When("User clicks on Queue Operations")
     public void userClicksOnQueueOperations()throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
     qp.queueops();
     }
 
     @Then("The Queue Operations page opens")
     public void theQueueOperationsPageOpens()throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
         qp.queueopschk();
     }
 
@@ -112,20 +112,20 @@ TryHereEditor_obj tr = new TryHereEditor_obj();
 
     @Then("the text editor opens and user gives python code")
     public void theTextEditorOpensAndUserGivesPythonCode() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
         tr.EditorBoxInput();
 
     }
 
     @And("User clicks on Run Button")
     public void userClicksOnRunButton() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(500);
         tr.RunBtnclick();
     }
 
     @Then("The output is displayed")
     public void theOutputIsDisplayed() throws Exception {
-        Thread.sleep(2000);
+        Thread.sleep(500);
         tr.OutputChkMsg();
 
     }

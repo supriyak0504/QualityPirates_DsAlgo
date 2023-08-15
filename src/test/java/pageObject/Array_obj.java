@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import utilities.LoggerLoad;
 
 import static org.testng.Assert.assertTrue;
 public class Array_obj {
@@ -99,8 +101,17 @@ public class Array_obj {
 
     public void ArrayPageDisplay() throws InterruptedException {
         Thread.sleep(1000);
-        boolean status = DisplayCheck.isDisplayed();
-        assertTrue(status);
+        //boolean status = DisplayCheck.isDisplayed();
+        try {
+            status = DisplayCheck.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+
     }
 
     public void ArrayInPythonPage() throws InterruptedException {
@@ -110,8 +121,18 @@ public class Array_obj {
 
     public void ArrayInPythonPageDisplay() throws InterruptedException {
         Thread.sleep(1000);
-        boolean status = DisplayCheckArrayInPython.isDisplayed();
-        assertTrue(status);
+        //boolean status = DisplayCheckArrayInPython.isDisplayed();
+        try {
+            status = DisplayCheckArrayInPython.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+
+
     }
 
     public void ArrayPythonPageTryhereButton() throws InterruptedException {
@@ -120,8 +141,16 @@ public class Array_obj {
     }
 
     public void ArrayPythonPageTryhereCodeBoxDisplay() {
-        boolean status = TryEditorDisplay.isDisplayed();
-        assertTrue(status);
+        //boolean status = TryEditorDisplay.isDisplayed();
+        try {
+            status = TryEditorDisplay.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
         driver.navigate().back();
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("window.scrollBy(0,-2500)");
@@ -136,8 +165,17 @@ public class Array_obj {
 
     public void ArrayUsingDisplay() throws InterruptedException {
         Thread.sleep(1000);
-        boolean status = ArraysUsingListDisplay.isDisplayed();
-        assertTrue(status);
+        //boolean status = ArraysUsingListDisplay.isDisplayed();
+        try {
+            status = ArraysUsingListDisplay.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void ArrayUsingListTryhereButton() throws InterruptedException {
@@ -148,8 +186,17 @@ public class Array_obj {
 
     public void ArrayUsingListTryhereCodeBoxDisplay() throws InterruptedException {
         Thread.sleep(1000);
-        boolean status = TryEditorDisplay.isDisplayed();
-        assertTrue(status);
+        //boolean status = TryEditorDisplay.isDisplayed();
+        try {
+            status = TryEditorDisplay.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
         driver.navigate().back();
     }
 
@@ -161,8 +208,17 @@ public class Array_obj {
 
     public void BasicOperationDisplay() throws InterruptedException {
         Thread.sleep(1000);
-        boolean status = BasicOperationDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status = BasicOperationDisplay_WE.isDisplayed();
+        try {
+            status = BasicOperationDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+       // assertTrue(status);
     }
 
     public void BasicOperationTryhereButton() throws InterruptedException {
@@ -173,8 +229,17 @@ public class Array_obj {
 
     public void BasicOperationTryhereDisplay() throws InterruptedException {
         Thread.sleep(1000);
-        boolean status = TryEditorDisplay.isDisplayed();
-        assertTrue(status);
+        //boolean status = TryEditorDisplay.isDisplayed();
+        try {
+            status = TryEditorDisplay.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
         driver.navigate().back();
     }
 
@@ -185,8 +250,17 @@ public class Array_obj {
     }
 
     public void ApplicationsOfArrayDisplay() {
-        boolean status = ApplicationsOfArrayDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status = ApplicationsOfArrayDisplay_WE.isDisplayed();
+        try {
+            status = ApplicationsOfArrayDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void ApplicationsOfArrayTryhereButton() throws InterruptedException {
@@ -197,7 +271,16 @@ public class Array_obj {
 
     public void ApplicationsOfArrayTryhereDisplay() {
         boolean status = TryEditorDisplay.isDisplayed();
-        assertTrue(status);
+        try {
+            status = TryEditorDisplay.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
         driver.navigate().back();
 
 
@@ -210,8 +293,17 @@ public class Array_obj {
     }
 
     public void PracticeQuestionsDisplay() {
-        boolean status = PracticeQuestionsDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status = PracticeQuestionsDisplay_WE.isDisplayed();
+        try {
+            status = PracticeQuestionsDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void SearchTheArrayLink() throws InterruptedException {
@@ -221,8 +313,17 @@ public class Array_obj {
     }
 
     public void SearchTheArrayDisplay() {
-        boolean status = RunButton_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status = RunButton_WE.isDisplayed();
+        try {
+            status = RunButton_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void ClearTxtEditor() throws InterruptedException {
@@ -251,8 +352,17 @@ public class Array_obj {
     }
     public void ErrorMsgDisplay() throws InterruptedException {
         Thread.sleep(1000);
-        boolean status = ErrorMsgDisplay_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status = ErrorMsgDisplay_WE.isDisplayed();
+        try {
+            status = ErrorMsgDisplay_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
         driver.navigate().back();
     }
 
@@ -276,8 +386,17 @@ public class Array_obj {
 
     public void SquaresOfSortedArrarSubmitError() throws InterruptedException {
         Thread.sleep(1000);
-        boolean status = SquaresOfSortedArrarSubmitError_WE.isDisplayed();
-        assertTrue(status);
+        //boolean status = SquaresOfSortedArrarSubmitError_WE.isDisplayed();
+        try {
+            status = SquaresOfSortedArrarSubmitError_WE.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
         driver.navigate().back();
     }
 

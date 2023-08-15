@@ -43,7 +43,7 @@ public class TryEditorDatadriven_obj {
 
   public void Pythoncode(String Code) throws InterruptedException {
        PageFactory.initElements(driver, this);
-       Thread.sleep(5000);
+       Thread.sleep(2000);
        TextEditor.sendKeys(Code);
    }
 
@@ -75,7 +75,7 @@ public class TryEditorDatadriven_obj {
             LoggerLoad.error("Assert false in try editor block");
             System.out.println(e.getMessage());
         }
-        driver.navigate().back();
+        //driver.navigate().back();
     }
     public void ClearTextEditor() throws InterruptedException {
 

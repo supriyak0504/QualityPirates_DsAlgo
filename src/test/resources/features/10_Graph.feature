@@ -10,17 +10,21 @@ Feature: Graph
   Scenario: Graph Page
     Given User is on Graph Page under Graph section
     When User scrolls down on the Graph Page
-    And Clicks on Try here button
-    Then User is redirected on Try Editor
-    And User goes back on Graph Page
+    And User clicks on Try here button
+    Then the text editor opens and user gives python code
+    And User clicks on Run Button
+    Then The output is displayed
+
 
   Scenario: Graph Representations
     Given User is on Graph Page
     When User clicks on Graph Representations link on Graph Page
     And Scrolls down on the page
-    And Clicks on Try here button
-    Then User is redirected on Try Editor
-    And User goes back on Graph Page
+    And User clicks on Try here button
+    Then the text editor opens and user gives python code
+    And User clicks on Run Button
+    Then The output is displayed
+
 
   Scenario: Practice Questions
     Given User is on Graph Page page
@@ -32,9 +36,11 @@ Feature: Graph
       Given User is on Graph Page
       When User clicks on Graph Representation link under Topics covered
       And Scrolls down on the page
-      And Clicks on Try here button
-      Then User is redirected on Try Editor
-      And User goes back on Graph Page
+      And User clicks on Try here button
+      Then the text editor opens and user gives python code
+      And User clicks on Run Button
+      Then The output is displayed
+
 
   Scenario: Back to HomePage
     Given The user is on "Graph" page

@@ -15,5 +15,5 @@ Feature: Registration Page
       |                         |              | QualityPirates        |
       | Qualilty123             | Pirates124   |                       |
       | Pirates#4&              |              | Pirates^%6            |
-      | Quality_Pirates_ds_algo | ds_algo@2023 | ds_algo@2023          |
+      | Quality_Pirates_ds_algo | ds_algo@2023 | ds_algo@2023 |
 

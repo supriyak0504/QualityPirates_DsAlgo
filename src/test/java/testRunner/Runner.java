@@ -4,8 +4,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-        features = {"C:\\numpy project\\QualityPirates_DsAlgo\\src\\test\\resources\\features"},
-        glue = {"stepDefinition"},
+        features = {"C:\\intellij\\QualityPirates_DsAlgo\\src\\test\\resources\\features"},
+        glue = {"stepDefinition", "Hooks.java"},
       //  monochrome = true,
         plugin = {
                 "pretty", "html:src/test/resources/Reports/qualitypiratesReport.html"

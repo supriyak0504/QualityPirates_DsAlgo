@@ -5,10 +5,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObject.Stack_obj;
+import pageObject.TryHereEditor_obj;
 
 public class Stack_SD {
 
     Stack_obj st = new Stack_obj();
+
+    TryHereEditor_obj tr = new TryHereEditor_obj();
 
 
     @Given("User is on home\\/Stack page")
@@ -38,9 +41,10 @@ public class Stack_SD {
     public void user_scrolls_down_on_operations_in_stack_page() {
 
     }
-    @When("User clicks on Try Here button on Operations in Stack page")
-    public void user_clicks_on_try_here_button_on_operations_in_stack_page() {
+    @When("User clicks on Try Here button on Operations in Stack page and user gives python code")
+    public void userClicksOnTryHereButtonOnOperationsInStackPageAndUserGivesPythonCode() {
         st.scrollDownStack();
+        tr.EditorBoxInput();
 
     }
     @Then("User goes back on Operations in Stack page")
@@ -65,9 +69,11 @@ public class Stack_SD {
     public void user_is_redirected_on_stack_implementation_page() {
 
     }
-    @When("User clicks on Try Here button on Implementation page")
-    public void user_clicks_on_try_here_button_on_implementation_page() {
+    @When("User clicks on Try Here button on Implementation page and user gives python code")
+    public void user_clicks_on_try_here_button_on_implementation_page_and_user_gives_python_code() throws Exception {
         st.scrollDownStack();
+        tr.EditorBoxInput();
+
 
     }
     @And("User goes back on Implementation page")
@@ -91,9 +97,11 @@ public class Stack_SD {
     public void user_is_redirected_to_stack_stack_applications() {
 
     }
-    @When("User scrolls down on the Applications page")
-    public void user_scrolls_down_on_the_applications_page() {
+    @When("User clicks on Try Here button on Applications page and user gives python code")
+    public void User_clicks_on_Try_Here_button_on_Applications_page_and_user_gives_python_code() throws Exception {
         st.scrollDownStack();
+        tr.EditorBoxInput();
+
 
     }
     @And("User goes back on Stack page")
@@ -127,5 +135,7 @@ public class Stack_SD {
         st.backPage();
         st.backPage();
     }
+
+
 }
 

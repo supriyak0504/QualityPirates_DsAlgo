@@ -22,8 +22,9 @@ public class TryEditorDatadriven_SD {
         te.PythonRun();
     }
     @Then("User should able to see the output")
-    public void user_should_able_to_see_the_output() throws InterruptedException {
-        te. ClearTextEditor();
+    public void user_should_able_to_see_the_output() throws Exception {
+        te.OutputChkMsg();
+        te.ClearTextEditor();
     }
     @Given("The user is on Try Editor Page")
     public void the_user_is_on_try_editor_page() {
