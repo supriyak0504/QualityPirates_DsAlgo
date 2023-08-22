@@ -15,7 +15,7 @@ public class Home_SetObj {
 
     public void GetStartedBtn_HMPage() throws InterruptedException {
         PageFactory.initElements(driver,this);
-        Thread.sleep(2000);
+        Thread.sleep(500);
         GetStartedbtn.click();
 
     }

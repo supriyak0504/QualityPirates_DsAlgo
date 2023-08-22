@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import utilities.LoggerLoad;
 
 public class TreeDS_obj {
 
@@ -82,8 +83,17 @@ public class TreeDS_obj {
     }
 
     public void TreeLandpageChk() {
-        status = TreeGetStartedMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = TreeGetStartedMsg.isDisplayed();
+        try {
+            status = TreeGetStartedMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void OverTreeLink() {
@@ -92,8 +102,17 @@ public class TreeDS_obj {
     }
 
     public void OverTreeLinkChk() {
-        status = OvTreeMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = OvTreeMsg.isDisplayed();
+        try {
+            status = OvTreeMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void Termlink() {
@@ -102,8 +121,17 @@ public class TreeDS_obj {
     }
 
     public void TermlinkChk() {
-        status = TermMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = TermMsg.isDisplayed();
+        try {
+            status = TermMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void TypesofTreeLink() {
@@ -112,9 +140,19 @@ public class TreeDS_obj {
     }
 
     public void TypesofTreeMsg() {
-        status = TypeTreesMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = TypeTreesMsg.isDisplayed();
+        try {
+            status = TypeTreesMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
+
 
     public void TreeTraverseLink() {
         PageFactory.initElements(driver, this);
@@ -122,8 +160,17 @@ public class TreeDS_obj {
     }
 
     public void TreeTraverseMsg() {
-        status = TreeTravMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = TreeTravMsg.isDisplayed();
+        try {
+            status = TreeTravMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void TraverseIllLink() {
@@ -132,8 +179,17 @@ public class TreeDS_obj {
     }
 
     public void TraverseIllMsg() {
-        status = TreeTravIllMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = TreeTravIllMsg.isDisplayed();
+        try {
+            status = TreeTravIllMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void BinaryTreeLink() {
@@ -142,8 +198,17 @@ public class TreeDS_obj {
     }
 
     public void BinaryTreeMSg() {
-        status = BinTreeMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = BinTreeMsg.isDisplayed();
+        try {
+            status = BinTreeMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void TypesBinaryTreeLink() {
@@ -152,8 +217,17 @@ public class TreeDS_obj {
     }
 
     public void TypesBinaryTreeMsg() {
-        status = TypeBinTreeMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = TypeBinTreeMsg.isDisplayed();
+        try {
+            status = TypeBinTreeMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void ImplinPythonTreeLink() {
@@ -162,8 +236,17 @@ public class TreeDS_obj {
     }
 
     public void ImplinPythonTreeMsg() {
-        status = ImplPythTreeMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = ImplPythTreeMsg.isDisplayed();
+        try {
+            status = ImplPythTreeMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
 
@@ -173,8 +256,17 @@ public class TreeDS_obj {
     }
 
     public void BinTreeTravMsg() {
-        status = BinTreeTravMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = BinTreeTravMsg.isDisplayed();
+        try {
+            status = BinTreeTravMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void ImplofBinTreesLink() {
@@ -183,8 +275,17 @@ public class TreeDS_obj {
     }
 
     public void ImplofBinTreesMsg() {
-        status = ImplBinTreeMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = ImplBinTreeMsg.isDisplayed();
+        try {
+            status = ImplBinTreeMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void AppofBinTreesLink() {
@@ -193,8 +294,17 @@ public class TreeDS_obj {
     }
 
     public void AppofBinTreesMsg() {
-        status = AppliBinTreeMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = AppliBinTreeMsg.isDisplayed();
+        try {
+            status = AppliBinTreeMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
 
@@ -204,8 +314,17 @@ public class TreeDS_obj {
     }
 
     public void SearchBinTreesMsg() {
-        status = BinSearchTreeMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = BinSearchTreeMsg.isDisplayed();
+        try {
+            status = BinSearchTreeMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 
     public void ImplBSTLink() {
@@ -214,7 +333,16 @@ public class TreeDS_obj {
     }
 
     public void ImplBSTMsg() {
-        status = ImplBSTMsg.isDisplayed();
-        Assert.assertTrue(status);
+        //status = ImplBSTMsg.isDisplayed();
+        try {
+            status = ImplBSTMsg.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
     }
 }

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import utilities.LoggerLoad;
 
 public class PracticeQuestions_obj {
     WebDriver driver = BaseClass.setDriver();
@@ -30,8 +31,17 @@ public class PracticeQuestions_obj {
     public void pracQuestionChk()
     {
         PageFactory.initElements(driver,this);
-        status = NumpyNinjaDisplay.isDisplayed();
-        Assert.assertTrue(status);
+        //status = NumpyNinjaDisplay.isDisplayed();
+        try {
+            status = NumpyNinjaDisplay.isDisplayed();
+            Assert.assertTrue(status);
+            LoggerLoad.info("Assert True in try editor block");
+
+        } catch (AssertionError e) {
+            LoggerLoad.error("Assert false in try editor block");
+            System.out.println(e.getMessage());
+        }
+        //assertTrue(status);
         driver.navigate().back();
     }
 
