@@ -19,7 +19,7 @@ public class HomePage_SD {
             System.out.println("String Value" + string);
             System.out.println("HP is" + hp.toString());
             hp.InitHomePage(string);
-            bcl.failed();
+            bcl.FailedScreenshot(string);
 
         }
 

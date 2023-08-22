@@ -43,11 +43,11 @@ public class Login_SD {
     @Then("The signed in homepage appears")
     public void the_signed_in_homepage_appears() throws IOException {
         lp.CheckSignin();
-        try {
-            bcl.failed();
+        /*try {
+            //bcl.FailedScreenshot(String);
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
+        }*/
 
     }
 

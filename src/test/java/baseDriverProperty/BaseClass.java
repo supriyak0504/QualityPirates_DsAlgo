@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Date;
 
 public class BaseClass {
 
@@ -37,15 +38,18 @@ public class BaseClass {
         return driver;
     }
 
-    @Test
-    public void takeScreenshotTest() {
-        Assert.assertEquals(false, true);
-    }
+    //@Test
+    //public void takeScreenshotTest() {
+        //Assert.assertEquals(false, true);
+    //}
 
-    public void failed() throws IOException {
+    public void FailedScreenshot(String testMethod) throws IOException {
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        Date d = new Date();
+
+        String TimeStamp = d.toString().replace(":", "_").replace(" ", "_");
         try{
-            FileUtils.copyFile(scrFile, new File("failshot_"+this.getClass().getName()+"_"+".jpg"));
+            FileUtils.copyFile(scrFile, new File("C:\\intellij\\QualityPirates_DsAlgo\\ScreenShots" + testMethod + "_" + TimeStamp + "_" + ".jpg"));
         } catch (IOException e)  {
             e.printStackTrace();
         }
